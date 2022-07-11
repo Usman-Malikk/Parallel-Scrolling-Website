@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallel Effect Css</title>
+<link rel="stylesheet" href="style.css">
+    <!-- Link css -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&family=Quicksand:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+<header>
+    <h1>Logo</h1>
+     <ul>
+        <li><a href=""  class="active">Home</a></li>
+        <li><a href="">Home</a></li>
+        <li><a href="">Home</a></li>
+        <li><a href="">Home</a></li>
+
+     </ul>
+</header>
+
+<section class="TXT">
+    <h1 id="cjkk">Welcome to the <br><span>Adventure</span></h1>
+  
+    <img id="bird1" src="./Images/bird1.png" alt="">
+    <img id="bird2"src="./Images/bird2.png" alt="">
+    <img id="forest"src="./Images/forest.png" alt="">
+    <img id="Rock"src="./Images/rocks.png" alt="">
+    <img id="water"src="./Images/water.png" alt="">
+    <button class="btn" id="btn"> <b>Explore More</b></button>
+</section>
+<div class="abc">
+
+</div>
+</body>
+<script>
+    let bird1 = document.getElementById("bird1")
+    let bird2 = document.getElementById("bird2")
+    let forest = document.getElementById("forest")
+    let Rock = document.getElementById("Rock")
+    let text = document.getElementById("cjkk")
+    let btn = document.getElementById("btn")
+
+  
+    window.addEventListener('scroll', function(e)
+    {
+        let value = window.scrollY
+text.style.top = `-${value/10}vh`
+bird1.style.top = `-${value/20}vh`
+bird2.style.top = `-${value/20}vh`
+
+bird1.style.right = `-${value/20}vh`
+bird2.style.right = `${value/20}vh`
+
+forest.style.top = `-${value/90}vh`
+Rock.style.top = `-${value/20}px`
+
+      console.log(value)
+    })
+</script>
+</html>
